@@ -24,32 +24,21 @@ public class Clock {
 
 	public void setHour(int hourHand){
 		hour = hourHand;
-		if(hourHand == 24)
+		if(hourHand > 23)
 			hour = 0;
-			minute = 0;
-			second = 0;
-			System.out.println("00:00:00");
-		if(hourHand > 24)
-			hour = hour++;
 	}
 
 	public void setMinute(int minuteHand){
 		minute = minuteHand;
-		if(minuteHand == 60)
+		if(minuteHand > 59)
 			minute = 0;
-			System.out.println("00:00:00");
-		if(minuteHand > 60)
-			minute = minute++;
 
 	}
 
 	public void setSecond(int secondHand){
 		second = secondHand;
-		if(secondHand == 60)
+		if(secondHand > 59)
 			second = 0;
-			System.out.println("00:00:00");
-		if(secondHand > 60)
-			second = second++;
 	}
 
 
@@ -68,12 +57,8 @@ public class Clock {
 
 	
 
-	public void displayTime(String displayTime){
-		
-		if(hour > 23)
-			if(minute > 59)
-				if(second > 59)
-					displayTime = "00:00:00";
+	public String displayTime(String displayTime){
+		return displayTime;
 	}
 
 	

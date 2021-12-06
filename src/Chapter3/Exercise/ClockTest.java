@@ -10,17 +10,9 @@ public class ClockTest{
 		
 		System.out.printf("The time is %d:%d:%d", time.getHour(), time.getMinute(), time.getSecond());
 		System.out.println();
-		Scanner input = new Scanner(System.in);
-		int hour = input.nextInt();
-		int minute = input.nextInt();
-		int second = input.nextInt();
-		time.setHour(hour);
-		time.setMinute(minute);
-		time.setSecond(second);
-		
-		time.getHour();
-		time.getMinute();
-		time.getSecond();
+
+		System.out.println(time.displayTime("00:00:00"));
+
 
 		
 	}

@@ -14,8 +14,48 @@ There’s no limit to the number of items that can be sold.
 
 */
 
+
+import java.util.Scanner;
+
 public class SalesCommissionCalculator {
     public static void main(String[] args) {
 
+        SalesCommissionCalculator worker1 = new SalesCommissionCalculator();
+        double salary = worker1.salary();
+        double grossEarnings = 0;
+
+        Scanner input = new Scanner(System.in);
+        double grossPay = worker1.grossSales(input.nextInt());
+        while(input.nextInt() != 0){
+            grossEarnings += grossPay;
+            System.out.println(grossEarnings);
+            //grossPay = worker1.grossSales(input.nextInt());
+        }
+        //double totalEarnings = salary + grossEarnings;
+        //System.out.println("This is the gross earnings of worker 1: #" + totalEarnings);
+    }
+
+    public double salary(){
+        double salary = 200;
+        return salary;
+    }
+
+    public double grossSales(int item){
+        double gross;
+        while(item > 0 && item < 5) {
+            if (item == 1) {
+                return gross = 239.99;
+            }
+            if (item == 2) {
+                return gross = 129.75;
+            }
+            if (item == 3) {
+                return gross = 99.95;
+            }
+            if (item == 4) {
+                return gross = 350.89;
+            }
+        }
+        return gross = 0;
     }
 }
