@@ -33,11 +33,9 @@ public class ArrayPractice2 {
             }
         }
 
-        System.out.print(numberList[0]+ " ");  System.out.print(numberList[1]+ " ");
-        System.out.print(numberList[2]+ " ");  System.out.print(numberList[3]+ " ");
-        System.out.print(numberList[4]+ " ");  System.out.print(numberList[5]+ " ");
-        System.out.print(numberList[6]+ " ");  System.out.print(numberList[7]+ " ");
-        System.out.print(numberList[8]+ " ");  System.out.print(numberList[9]);
+        for(int i = 0; i < numberList.length; i++){
+            System.out.print(numberList[i]+ " ");
+        }
 
         System.out.println();
 
