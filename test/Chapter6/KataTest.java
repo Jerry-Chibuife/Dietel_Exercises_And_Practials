@@ -1,5 +1,6 @@
 package Chapter6;
 
+import Chapter6.Practice.Kata;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -115,5 +116,32 @@ public class KataTest {
         Cata copy = new Cata();
         String price = copy.Price(4);
         assertEquals("#2000 per copy", price);
+    }
+
+
+
+    @Test
+    public void arraysTotalCanBeCalculatedTest(){
+
+        int result = Kata.calculateTotalOf(new int[]{1, 2, 3, 4, 5});
+        assertEquals(15, result);
+    }
+
+    @Test
+    public void arraysMinimumCanBeCalculatedTest(){
+        int result = Kata.calculateMinimumOf(new int[]{1, 2, 3, 4, 5});
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void arraysMaximumCanBeCalculatedTest(){
+        int result = Kata.calculateMaximumOf(new int[]{1, 2, 3, 4, 5});
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void arraysAverageCanBeCalculatedTest(){
+        double result = Kata.calculateAverageOf(new int[]{1, 2, 3, 4, 5});
+        assertEquals(3.0, result);
     }
 }
