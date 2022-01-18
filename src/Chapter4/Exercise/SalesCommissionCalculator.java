@@ -19,43 +19,25 @@ import java.util.Scanner;
 
 public class SalesCommissionCalculator {
     public static void main(String[] args) {
-
-        SalesCommissionCalculator worker1 = new SalesCommissionCalculator();
-        double salary = worker1.salary();
-        double grossEarnings = 0;
-
+        double total = 0;
+        System.out.println("Enter a number between 1-4. Enter -1 to exit loop");
         Scanner input = new Scanner(System.in);
-        double grossPay = worker1.grossSales(input.nextInt());
-        while(input.nextInt() != 0){
-            grossEarnings += grossPay;
-            System.out.println(grossEarnings);
-            //grossPay = worker1.grossSales(input.nextInt());
+        int sales = input.nextInt();
+        while(sales != -1 && sales > 0 && sales < 5){
+            if(sales == 1)
+                total += 239.99;
+            else if(sales == 2)
+                total += 129.75;
+            else if(sales == 3)
+                total += 99.95;
+            else if(sales == 4)
+                total += 350.89;
+            else System.out.println("Invalid value");
+            sales = input.nextInt();
         }
-        //double totalEarnings = salary + grossEarnings;
-        //System.out.println("This is the gross earnings of worker 1: #" + totalEarnings);
-    }
-
-    public double salary(){
-        double salary = 200;
-        return salary;
-    }
-
-    public double grossSales(int item){
-        double gross;
-        while(item > 0 && item < 5) {
-            if (item == 1) {
-                return gross = 239.99;
-            }
-            if (item == 2) {
-                return gross = 129.75;
-            }
-            if (item == 3) {
-                return gross = 99.95;
-            }
-            if (item == 4) {
-                return gross = 350.89;
-            }
-        }
-        return gross = 0;
+        total *= 0.09;
+        total += 200;
+        System.out.printf("The salesperson's earnings for the week is %.2f dollars",total);
     }
 }
+//w3resource.com/java-exercises
