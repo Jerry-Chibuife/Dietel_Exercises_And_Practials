@@ -20,6 +20,17 @@ is today, if this year’s growth rate were to persist.
 
 public class WorldPopulationGrowth {
     public static void main(String[] args) {
-
+        double currentWorldPopulation = 7921322903.00;
+        double populationGrowthRate = 0.0105;
+        System.out.println("YEAR\tNEW_WORLD_POPULATION\tESTIMATED_POPULATION_INCREASE");
+        for(int i = 1; i <= 100; i++){
+            double estimatedPopulationIncrease = currentWorldPopulation * populationGrowthRate;
+            double newWorldPopulation = currentWorldPopulation + estimatedPopulationIncrease;
+            System.out.print("Year " + i + "\t");
+            System.out.printf("%.2f\t\t\t", newWorldPopulation);
+            System.out.printf("%.2f\t", estimatedPopulationIncrease);
+            currentWorldPopulation += estimatedPopulationIncrease;
+            System.out.println();
+        }
     }
 }

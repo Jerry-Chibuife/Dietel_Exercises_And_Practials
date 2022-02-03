@@ -10,7 +10,7 @@ with the variable that accumulates the product?
 
 public class TheSumOfASeries {
     public static void main(String[] args) {
-        int total = 0;
+        long total = 0;
         for(int i = 1; i <= 100; i++){
             total += i;
             System.out.printf("%d\t\t\t%d%n", i, total);

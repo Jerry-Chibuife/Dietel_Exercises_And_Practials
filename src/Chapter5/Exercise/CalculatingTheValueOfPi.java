@@ -13,14 +13,20 @@ series. How many terms do you have to use before you first get a value that begi
 
 public class CalculatingTheValueOfPi {
     public static void main(String[] args) {
-        int pi;
-        for(int i = 1; i <= 200000; i++){
-            for (int c = 1; c <= 200000; c++)
-                for(int a = 1; a <= 1; a++)
-                    if(c % 2 == 1) {
-                        pi = 4 + (i - 1) * (-8 / ((c + 2) + 2));
-                        System.out.println("Term " + i + " Value: " + pi);
-                    }
+        double pi = 0;
+        int numerator = 4;
+        double denominator = 1;
+
+        for(int i = 1; i <= 200001; i++){
+            if(i % 2 == 0){
+                pi -= (numerator / denominator);}
+            else{
+                pi += (numerator / denominator);}
+            denominator += 2;
+            System.out.printf("%d/%.1f: ", numerator, denominator);
+            System.out.printf("%.10f%n", pi);
         }
+        System.out.println("Final value of pi is " + pi);
+
     }
 }

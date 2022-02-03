@@ -15,6 +15,10 @@ known algorithmic approach other than using sheer brute force.
 
 public class PythagoreanTriples {
     public static void main(String[] args) {
-
+        for(int i = 1; 1 <= 20; i++)
+            for(int j = 1; j <= 20; j++)
+                for(int k = 1; k <= 20; k++)
+                    if(Math.pow(i, 2) + Math.pow(j, 2) == Math.pow(k, 2))
+                        System.out.println("A right angle with sides " + i + " and " + j + " has a hypotenuse of " + k + ". Therefore, it satisfies the Pythagorean triple principle");
     }
 }
