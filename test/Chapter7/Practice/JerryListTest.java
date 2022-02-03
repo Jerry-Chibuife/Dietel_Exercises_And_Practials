@@ -2,7 +2,6 @@ package Chapter7.Practice;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -127,5 +126,20 @@ class JerryListTest {
         assertEquals(4, store.getSize());
         assertEquals(4, store.getCapacity());
         System.out.println(store.printListValues());
+    }
+
+    @Test
+    public void canGetValueFromASpecificIndex(){
+        JerryList<String> store = new JerryList<>();
+        store.add("Apple");
+        store.add("Book");
+        store.add("Candy");
+        store.add("Dandelion");
+        store.add("Emitter");
+        assertEquals(5, store.getSize());
+        assertEquals(5, store.getCapacity());
+        String result = store.getValue(2);
+        System.out.println(store.getValue(2));
+        assertEquals("Candy", result);
     }
 }

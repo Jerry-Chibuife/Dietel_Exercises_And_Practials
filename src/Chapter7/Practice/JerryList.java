@@ -51,10 +51,7 @@ public class JerryList<O> {
             controlNumber++;
         }
         newObject = new String[saveObject.length-1];
-        for(int b= 0; b<newObject.length; b++){
-//            if(saveObject[b] != null)
-                newObject[b] = saveObject[b];
-        }
+        System.arraycopy(saveObject, 0, newObject, 0, newObject.length);
     }
 
     public String printListValues() {
@@ -117,5 +114,18 @@ public class JerryList<O> {
             else
                 newObject[b] = saveObject[b+1];
         }
+    }
+
+    public String getValue(int index) {
+        String[] result = newObject;
+        String save = "";
+        StringBuilder builder = new StringBuilder();
+        for(int k = 0; k < newObject.length; k++){
+            if(k == index) {
+                save = result[k];
+                builder.append(save);
+            }
+        }
+        return builder.toString();
     }
 }
